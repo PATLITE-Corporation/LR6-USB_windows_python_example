@@ -1,0 +1,58 @@
+■ Windows
+・ Install libusb (dll)
+Download the binaries from libusb's GitHub.
+* 2021/07/05 The current version is v1.0.24
+https://github.com/libusb/libusb/releases
+Unzip VS2019 \ MS64 \ dll \ libusb-1.0.dll in the compressed file and place it in C: \ Windows \ System32.
+・ Creating a Virtual Environment
+Create a Python virtual environment so that it does not affect the system environment
+Install the package for USB operation.
+Launch Command Prompt, navigate to the working folder, and then create a virtual environment.
+> python -m venv venv
+Enable virtual environment
+> venv \ Scripts \ activate.bat
+
+Updating Standard Package
+> python -m pip install -U pip setuptools
+
+Install USB operation package (PyUSB).
+> python -m pip install pyusb
+
+Execution of sample program
+> python main.py
+
+End of virtual environment
+> venv \ Scripts \ deactivate.bat
+
+Sample programs can be executed by performing "Enable virtual environment."
+
+
+■ Linux
+・Install libusb (so)
+Install libusb with the apt-get command.
+$ sudo apt-get install libusb-1.0.0
+* Ubuntu-18.04 includes it as standard.
+・Installation of packages for Python3 virtual environment
+$ sudo apt-get install python3-venv
+・ Creating a virtual environment
+Create a Python virtual environment so that it does not affect the system environment
+Install the package for USB operation.
+Start the terminal, navigate to the working directory, and then create a virtual environment.
+$ python3 -m venv venv
+
+Enable virtual environment
+$ source venv / bin / activate
+
+Standard package update
+$ python3 -m pip install -U pip setuptools
+
+Install USB operation package (PyUSB).
+$ python3 -m pip install pyusb
+
+Execution of sample program
+$ python3 main.py
+
+End of virtual environment
+$ deactivate
+
+Sample programs can be executed by performing "Enable virtual environment."
